@@ -32,19 +32,19 @@ public class Constants {
         // TODO Tune gains and accels for robot. Currnently moves in an odd rhomboid way.
 
         public static final double X_GAIN          = 0.03;    // Strength of axial position control
-        public static final double X_ACCEL         = 50;     // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
+        public static final double X_ACCEL         = 1000;  //from 50   // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
         public static final double X_TOLERANCE     = 1;     // Controller is is "inPosition" if position error is < +/- this amount
         public static final double X_DEADBAND      = 0.2;     // Error less than this causes zero output.  Must be smaller than DRIVE_TOLERANCE
         public static final double X_MAX_AUTO      = 0.9;     // "default" Maximum Axial power limit during autonomous
 
         public static final double Y_GAIN         = -0.03;    // Strength of lateral position control
-        public static final double Y_ACCEL        = 50;     // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
+        public static final double Y_ACCEL        = 50;   // from 50  // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
         public static final double Y_TOLERANCE    = 1;     // Controller is is "inPosition" if position error is < +/- this amount
         public static final double Y_DEADBAND     = 0.2;     // Error less than this causes zero output.  Must be smaller than DRIVE_TOLERANCE
         public static final double Y_MAX_AUTO     = 0.9;     // "default" Maximum Lateral power limit during autonomous
 
         public static final double HEADING_GAIN            = -0.03;    // Strength of Yaw position control
-        public static final double HEADING_ACCEL           = 50;     // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
+        public static final double HEADING_ACCEL           = 1000;  //from 50   // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
         public static final double HEADING_TOLERANCE       = 2.0;     // Controller is is "inPosition" if position error is < +/- this amount
         public static final double HEADING_DEADBAND        = 0.5;    // Error less than this causes zero output.  Must be smaller than DRIVE_TOLERANCE
         public static final double HEADING_MAX_AUTO        = 0.9;     // "default" Maximum Yaw power limit during autonomous
@@ -80,7 +80,7 @@ public class Constants {
         public static final int DownPosition = 100;
         public static final int LowBarPosition = 2262;
         public static final int HighBarPosition = 13000;
-        public static final int ClimbBarPosition = 15750;
+        public static final int ClimbBarPosition = 15740;
 
 
 
@@ -119,8 +119,8 @@ public class Constants {
         public static final String intakeServo = "intakeServo";
 
         public static final String slideServo                ="intakeSlideServo";
-        public static final double forwardPosition      = 0.1;
-        public static final double backPosition         = 0.5;
+        public static final double forwardPosition      = 0.0;
+        public static final double backPosition         = 0.7;
 
         public static final String doorServo            ="intakeDoor";
         public static final double doorOpenPosition         =0.5;
