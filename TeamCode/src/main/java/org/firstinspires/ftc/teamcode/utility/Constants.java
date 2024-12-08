@@ -53,11 +53,11 @@ public class Constants {
         public static final String Otos ="otos"; // Define Devicename for Otos
 
         //Todo define starting linear and angular scalers, offset on robot and starting pose
-        public static final SparkFunOTOS.Pose2D offset = new SparkFunOTOS.Pose2D(3.25,.375,180); // Offset for Otos mounting on robot
-        public static final double linearScaler = 1.0;
+        public static final SparkFunOTOS.Pose2D offset = new SparkFunOTOS.Pose2D(3.25,8.25,180); // Offset for Otos mounting on robot
+        public static final double linearScaler = 0.98; //0.993;
         public static final double angularScaler = 1.0;
 
-        public static final SparkFunOTOS.Pose2D Specimen = new SparkFunOTOS.Pose2D(8.5,62.0,0.0); // Starting position for blue specimen position
+        public static final SparkFunOTOS.Pose2D Specimen = new SparkFunOTOS.Pose2D(8.5,62.0,180.0); // Starting position for blue specimen position
         public static final SparkFunOTOS.Pose2D Bucket = new SparkFunOTOS.Pose2D(8.5,110.0,0.0); // Starting position for blue bucket position
 
     }
@@ -123,11 +123,11 @@ public class Constants {
         public static final double backPosition         = 0.7;
 
         public static final String doorServo            ="intakeDoor";
-        public static final double doorOpenPosition         =0.5;
-        public static final double doorClosePosition        =0.0;
+        public static final double doorOpenPosition         =0.6;
+        public static final double doorClosePosition        =0.4;
 
         public static final String armRotationServo          ="armRotationServo";
-        public static final double armDownPosition       =0.5;
+        public static final double armDownPosition       =0.6;
         public static final double armMidPosition        =0.25;
         public static final double armUpPosition         =0.0;
 
