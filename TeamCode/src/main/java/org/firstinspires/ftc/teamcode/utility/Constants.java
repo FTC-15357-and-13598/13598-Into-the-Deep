@@ -33,19 +33,19 @@ public class Constants {
 
         public static final double X_GAIN          = 0.025;    // Strength of axial position control
         public static final double X_ACCEL         = 1000;  //from 50   // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
-        public static final double X_TOLERANCE     = 1;     // Controller is is "inPosition" if position error is < +/- this amount
+        public static final double X_TOLERANCE     = 1.5;     // Controller is is "inPosition" if position error is < +/- this amount
         public static final double X_DEADBAND      = 0.2;     // Error less than this causes zero output.  Must be smaller than DRIVE_TOLERANCE
         public static final double X_MAX_AUTO      = 0.9;     // "default" Maximum Axial power limit during autonomous
 
         public static final double Y_GAIN         = -0.025;    // Strength of lateral position control
         public static final double Y_ACCEL        = 1000;   // from 50  // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
-        public static final double Y_TOLERANCE    = 1;     // Controller is is "inPosition" if position error is < +/- this amount
+        public static final double Y_TOLERANCE    = 1.5;     // Controller is is "inPosition" if position error is < +/- this amount
         public static final double Y_DEADBAND     = 0.2;     // Error less than this causes zero output.  Must be smaller than DRIVE_TOLERANCE
         public static final double Y_MAX_AUTO     = 0.9;     // "default" Maximum Lateral power limit during autonomous
 
         public static final double HEADING_GAIN            = -0.025;    // Strength of Yaw position control
         public static final double HEADING_ACCEL           = 1000;  //from 50   // Acceleration limit.  Percent Power change per second.  1.0 = 0-100% power in 1 sec.
-        public static final double HEADING_TOLERANCE       = 2.0;     // Controller is is "inPosition" if position error is < +/- this amount
+        public static final double HEADING_TOLERANCE       = 3.0;     // Controller is is "inPosition" if position error is < +/- this amount
         public static final double HEADING_DEADBAND        = 0.5;    // Error less than this causes zero output.  Must be smaller than DRIVE_TOLERANCE
         public static final double HEADING_MAX_AUTO        = 0.9;     // "default" Maximum Yaw power limit during autonomous
 
@@ -91,7 +91,7 @@ public class Constants {
         public static final String MOTOR = "viperRight";
         public static final DcMotorSimple.Direction Direction =DcMotorSimple.Direction.REVERSE;
 
-        public static final double defaultPower         =0.5;
+        public static final double defaultPower         =0.95;
         public static final int tolerance               =2;
 
         public static final int DownPosition            = 5;

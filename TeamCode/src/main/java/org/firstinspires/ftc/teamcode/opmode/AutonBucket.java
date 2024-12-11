@@ -54,14 +54,19 @@ public class AutonBucket extends LinearOpMode
         switch (step){
             case 1 :
                 intakeSubSystem.armMidPosition();
-                sleep(500);
+                sleep(375);
                 bucketElevator.highBucket();
                // drivetrain.gotoPosition(13,129.5,0,.2,1);
-                drivetrain.gotoPosition(13,129.5,-45,.25,.5);
-
+                //Move away from wall
+                drivetrain.gotoPosition(16.5,110,0,.75,0);
+                drivetrain.gotoPosition(5.5,130,-45,.75,.5);
+                //Dump sample 0 into bucket
                 bucketElevator.servoDump();
-                sleep(850);
+                //Wait until bucket is dumped.
+                sleep(650);
+                //Move bucket servo to receive positiob
                 bucketElevator.servoRecieve();
+                //Lower Bucket Elevator
                 bucketElevator.toDown();
                 step=step+1;
             case 2 :
@@ -69,76 +74,87 @@ public class AutonBucket extends LinearOpMode
                 //drivetrain.gotoPosition(20,127,-45,.2,0);
                // drivetrain.gotoPosition(20,127,0,.2,0);
                 //drivetrain.gotoPosition(26,128,0,.2,0);
-                drivetrain.gotoPosition(26,129,-31,.3,.5);
+                //Move to position near the 1st sample
+                drivetrain.gotoPosition(23,128,-25,.75,.25);
                 intakeSubSystem.armDownPosition();
                 sleep(250);
                 intakeSubSystem.intakeReverse();
+                //When intake is running move arm slide forward to gobble the sample. We also drive forward.
                 intakeSubSystem.intakeSlideForward();
-                drivetrain.gotoPosition(37,121,-31,.3,0);
+                drivetrain.gotoPosition(37,119,-23,.75,0.3);
                 intakeSubSystem.intakeStop();
+                sleep(150);
+                //intakeSubSystem.intakeSlideReverse();
                 intakeSubSystem.armUpPosition();
                 intakeSubSystem.intakeSlideReverse();
                 sleep(250);
+                //Dump sample 1 into bucket
                 intakeSubSystem.intakeReverse();
-                drivetrain.gotoPosition(24,129,0,.3,.15);
+                drivetrain.gotoPosition(22,121,0,.75,.15);
 
             case 3 :
+                //Move arm to mid to clear the bucket
                 intakeSubSystem.armMidPosition();
                 intakeSubSystem.intakeStop();
                 sleep(250);
+                //Elevate bucket to high position
                 bucketElevator.highBucket();
                 //drivetrain.gotoPosition(15,129.5,0,.2,0);
-                drivetrain.gotoPosition(13,129.5,-45,.25,.5);
+                drivetrain.gotoPosition(5.5,130,-45,.75,.5);
                 bucketElevator.servoDump();
-                sleep(850);
+                sleep(750);
                 bucketElevator.servoRecieve();
+                //After dump, drop bucket down
                 bucketElevator.toDown();
                 step=step+1;
 
             case 4:
-                drivetrain.gotoPosition(23,128,0,.3,0.2);
+                drivetrain.gotoPosition(17,129,0,.75,0);
                 intakeSubSystem.intakeSlideOutAndArmDown();
                 intakeSubSystem.intakeReverse();
-                sleep(250);
-                drivetrain.gotoPosition(32,128,0,.3,0);
+                drivetrain.gotoPosition(33,129,0,.75,.45);
                 intakeSubSystem.intakeStop();
+                sleep(250);
                 intakeSubSystem.armUpPosition();
                 intakeSubSystem.intakeSlideReverse();
                 sleep(250);
                 intakeSubSystem.intakeReverse();
-                drivetrain.gotoPosition(24,129,0,.3,.15);
+                drivetrain.gotoPosition(24,129,0,.75,.15);
                 intakeSubSystem.armMidPosition();
                 intakeSubSystem.intakeStop();
                 sleep(250);
                 bucketElevator.highBucket();
                 //drivetrain.gotoPosition(15,129.5,0,.2,0);
-                drivetrain.gotoPosition(13,129.5,-45,.25,.5);
+                drivetrain.gotoPosition(5.5,130,-45,.75,.35);
                 bucketElevator.servoDump();
-                sleep(850);
+                sleep(650);
                 bucketElevator.servoRecieve();
                 bucketElevator.toDown();
-                drivetrain.gotoPosition(29,127,35,.3,0.1);
+                //Get last sample
+                drivetrain.gotoPosition(29,127,35,.75,0.1);
                 intakeSubSystem.intakeSlideOutAndArmDown();
                 intakeSubSystem.intakeReverse();
-                sleep(750);
-                //drivetrain.gotoPosition(31,128,0,.25,0);
+                sleep(650);
+                drivetrain.gotoPosition(34.75,130.25,35,.75,.45);
                 intakeSubSystem.intakeStop();
+                sleep(250);
                 intakeSubSystem.armUpPosition();
                 intakeSubSystem.intakeSlideReverse();
-                sleep(250);
+                sleep(500);
                 intakeSubSystem.intakeReverse();
-                drivetrain.gotoPosition(24,129,0,.3,.15);
+                drivetrain.gotoPosition(24,129,0,.5,.15);
                 intakeSubSystem.armMidPosition();
                 intakeSubSystem.intakeStop();
+                sleep(250);
                 bucketElevator.highBucket();
-                drivetrain.gotoPosition(13,129.5,-45,.25,.5);
+                drivetrain.gotoPosition(6,130,-45,.5,.35);
                 bucketElevator.servoDump();
-                sleep(850);
+                sleep(750);
                 bucketElevator.servoRecieve();
                 bucketElevator.LowBar();
 
-                drivetrain.gotoPosition(61,115,90,.55,0);
-                drivetrain.gotoPosition(61.5,94,90,.55,0);
+                drivetrain.gotoPosition(69,115,90,.55,0);
+                drivetrain.gotoPosition(69.5,98,90,.55,0);
                 bucketElevator.servoDump();
                 sleep(2000);
         }
