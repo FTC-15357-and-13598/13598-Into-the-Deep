@@ -59,7 +59,7 @@ public class AutonBucket extends LinearOpMode
                // drivetrain.gotoPosition(13,129.5,0,.2,1);
                 //Move away from wall
                 drivetrain.gotoPosition(16.5,110,0,.75,0);
-                drivetrain.gotoPosition(5.5,130,-45,.75,.5);
+                drivetrain.gotoPosition(5.5,130,-45,.75,.15);
                 //Dump sample 0 into bucket
                 bucketElevator.servoDump();
                 //Wait until bucket is dumped.
@@ -100,7 +100,7 @@ public class AutonBucket extends LinearOpMode
                 //Elevate bucket to high position
                 bucketElevator.highBucket();
                 //drivetrain.gotoPosition(15,129.5,0,.2,0);
-                drivetrain.gotoPosition(5.5,130,-45,.75,.5);
+                drivetrain.gotoPosition(5.5,130,-45,.75,.15);
                 bucketElevator.servoDump();
                 sleep(750);
                 bucketElevator.servoRecieve();
@@ -125,7 +125,7 @@ public class AutonBucket extends LinearOpMode
                 sleep(250);
                 bucketElevator.highBucket();
                 //drivetrain.gotoPosition(15,129.5,0,.2,0);
-                drivetrain.gotoPosition(5.5,130,-45,.75,.35);
+                drivetrain.gotoPosition(5.5,130,-45,.75,.15);
                 bucketElevator.servoDump();
                 sleep(650);
                 bucketElevator.servoRecieve();
@@ -147,15 +147,15 @@ public class AutonBucket extends LinearOpMode
                 intakeSubSystem.intakeStop();
                 sleep(250);
                 bucketElevator.highBucket();
-                drivetrain.gotoPosition(6,130,-45,.5,.35);
+                drivetrain.gotoPosition(6,130,-45,.5,.15);
                 bucketElevator.servoDump();
                 sleep(750);
                 bucketElevator.servoRecieve();
                 bucketElevator.LowBar();
 
-                drivetrain.gotoPosition(69,115,90,.55,0);
-                drivetrain.gotoPosition(69.5,98,90,.55,0);
+                drivetrain.gotoPosition(69,115,90,.6,0);
                 bucketElevator.servoDump();
+                drivetrain.gotoPosition(69.5,98,90,.6,0);
                 sleep(2000);
         }
             //update dashboard and telemetry if used

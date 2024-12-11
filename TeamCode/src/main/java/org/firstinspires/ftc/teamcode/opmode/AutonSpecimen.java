@@ -67,7 +67,7 @@ public class AutonSpecimen extends LinearOpMode
         switch (step){
             case 1 :
                 specimenElevator.highBar();
-                drivetrain.gotoPosition(31.7,70,180,.2,4.25);
+                drivetrain.gotoPosition(31.7,70,180,.3,4.25);
 
             case 2 :
                 //if (specimenElevator.position>(Constants.Specimen.HighBarPosition)-200) {
@@ -90,16 +90,16 @@ public class AutonSpecimen extends LinearOpMode
                 //drivetrain.gotoPosition(55,13,0,.5,0);
                 //drivetrain.gotoPosition(18,13,0,.5,0);
                 //Drive away after scoring
-                drivetrain.gotoPosition(24,29,0,.55,0);
-                drivetrain.gotoPosition(12,29,0,.25,0.5);
+                drivetrain.gotoPosition(24,17,0,.55,0);
+                drivetrain.gotoPosition(12,17,0,.25,0.5);
                 //Final move in to grab piece
                 drivetrain.moveRobot(-0.2,0,0);
                 sleep(3500);
                 specimenElevator.highBar();
                 sleep(500);
                 drivetrain.gotoPosition(20,40,0,.5,0);
-                drivetrain.gotoPosition(32.7,68,180,.2,2);
-                drivetrain.gotoPosition(39,68,180,.15,0);
+                drivetrain.gotoPosition(32.7,72,180,.25,2);
+                drivetrain.gotoPosition(39,72,180,.15,0);
                 specimenElevator.hookAuto();
                 specimenElevator.toDown();
                 drivetrain.gotoPosition(18,24,180,.6,2);
