@@ -79,8 +79,8 @@ public class Constants {
 
         public static final int DownPosition = 500;
         public static final int LowBarPosition = 2262;
-        public static final int HighBarPosition = 13000;
-        public static final int ClimbBarPosition = 15740;
+        public static final int HighBarPosition = 13500;
+        public static final int ClimbBarPosition = 15700;
 
 
 
