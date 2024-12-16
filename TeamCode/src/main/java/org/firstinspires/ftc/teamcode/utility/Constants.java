@@ -77,7 +77,7 @@ public class Constants {
         //public static final int LowBarPosition = 400;
         //public static final int HighBarPosition = 1004;
 
-        public static final int DownPosition = 500;
+        public static final int DownPosition = 200;
         public static final int LowBarPosition = 2262;
         public static final int HighBarPosition = 13500;
         public static final int ClimbBarPosition = 15700;
@@ -102,6 +102,7 @@ public class Constants {
         public static final String Servo                ="dumpServo";
         public static final double recievePosition      = 0.0;
         public static final double dumpPosition         = 1.0;
+        public static final double raisePosition         = 0.37;
     }
 
     public static final class INTAKE {
@@ -129,7 +130,7 @@ public class Constants {
         public static final String armRotationServo          ="armRotationServo";
         public static final double armDownPosition       =0.6;
         public static final double armMidPosition        =0.25;
-        public static final double armUpPosition         =0.0;
+        public static final double armUpPosition         =0.1;
 
     }
 

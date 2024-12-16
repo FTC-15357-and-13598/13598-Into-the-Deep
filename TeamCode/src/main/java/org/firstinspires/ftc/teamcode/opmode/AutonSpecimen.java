@@ -67,7 +67,8 @@ public class AutonSpecimen extends LinearOpMode
         switch (step){
             case 1 :
                 specimenElevator.highBar();
-                drivetrain.gotoPosition(31.7,70,180,.3,4.25);
+                sleep(4200);
+                drivetrain.gotoPosition(30.7,70,180,.3,0.25);
 
             case 2 :
                 //if (specimenElevator.position>(Constants.Specimen.HighBarPosition)-200) {
@@ -75,7 +76,7 @@ public class AutonSpecimen extends LinearOpMode
                 //}
 
             case 3 :
-                drivetrain.gotoPosition(39,70,180,.15,1);
+                drivetrain.gotoPosition(32,70,180,.15,1);
                 specimenElevator.hookAuto();
                 step=step+1;
 
@@ -97,12 +98,12 @@ public class AutonSpecimen extends LinearOpMode
                 sleep(3500);
                 specimenElevator.highBar();
                 sleep(500);
-                drivetrain.gotoPosition(20,40,0,.5,0);
-                drivetrain.gotoPosition(32.7,72,180,.25,2);
-                drivetrain.gotoPosition(39,72,180,.15,0);
+                drivetrain.gotoPosition(18,40,0,.5,0);
+                drivetrain.gotoPosition(12,72,180,.25,2);
+                drivetrain.gotoPosition(30,72,180,.2,0);
                 specimenElevator.hookAuto();
                 specimenElevator.toDown();
-                drivetrain.gotoPosition(18,24,180,.6,2);
+                drivetrain.gotoPosition(18,26,180,.75,2);
                 step=step+1;
         }
             //update dashboard and telemetry if used

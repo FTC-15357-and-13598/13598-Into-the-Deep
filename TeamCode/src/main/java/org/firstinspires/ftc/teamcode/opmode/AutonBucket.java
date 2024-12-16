@@ -59,7 +59,7 @@ public class AutonBucket extends LinearOpMode
                // drivetrain.gotoPosition(13,129.5,0,.2,1);
                 //Move away from wall
                 drivetrain.gotoPosition(16.5,110,0,.75,0);
-                drivetrain.gotoPosition(5.5,130,-45,.75,.15);
+                drivetrain.gotoPosition(5,130,-45,.75,.15);
                 //Dump sample 0 into bucket
                 bucketElevator.servoDump();
                 //Wait until bucket is dumped.
@@ -81,7 +81,7 @@ public class AutonBucket extends LinearOpMode
                 intakeSubSystem.intakeReverse();
                 //When intake is running move arm slide forward to gobble the sample. We also drive forward.
                 intakeSubSystem.intakeSlideForward();
-                drivetrain.gotoPosition(37,119,-23,.75,0.3);
+                drivetrain.gotoPosition(37,117,-23,.75,0.3);
                 intakeSubSystem.intakeStop();
                 sleep(150);
                 //intakeSubSystem.intakeSlideReverse();
@@ -90,7 +90,7 @@ public class AutonBucket extends LinearOpMode
                 sleep(250);
                 //Dump sample 1 into bucket
                 intakeSubSystem.intakeReverse();
-                drivetrain.gotoPosition(22,121,0,.75,.15);
+                drivetrain.gotoPosition(22,120,0,.75,.15);
 
             case 3 :
                 //Move arm to mid to clear the bucket
@@ -109,10 +109,10 @@ public class AutonBucket extends LinearOpMode
                 step=step+1;
 
             case 4:
-                drivetrain.gotoPosition(17,129,0,.75,0);
+                drivetrain.gotoPosition(17,130,0,.75,0);
                 intakeSubSystem.intakeSlideOutAndArmDown();
                 intakeSubSystem.intakeReverse();
-                drivetrain.gotoPosition(33,129,0,.75,.45);
+                drivetrain.gotoPosition(33,130,0,.75,.45);
                 intakeSubSystem.intakeStop();
                 sleep(250);
                 intakeSubSystem.armUpPosition();
@@ -131,11 +131,11 @@ public class AutonBucket extends LinearOpMode
                 bucketElevator.servoRecieve();
                 bucketElevator.toDown();
                 //Get last sample
-                drivetrain.gotoPosition(29,127,35,.75,0.1);
+                drivetrain.gotoPosition(29,126,35,.75,0.1);
                 intakeSubSystem.intakeSlideOutAndArmDown();
                 intakeSubSystem.intakeReverse();
                 sleep(650);
-                drivetrain.gotoPosition(34.75,130.25,35,.75,.45);
+                drivetrain.gotoPosition(33.75,129.25,35,.75,.45);
                 intakeSubSystem.intakeStop();
                 sleep(250);
                 intakeSubSystem.armUpPosition();
@@ -153,9 +153,9 @@ public class AutonBucket extends LinearOpMode
                 bucketElevator.servoRecieve();
                 bucketElevator.LowBar();
 
-                drivetrain.gotoPosition(69,115,90,.6,0);
+                drivetrain.gotoPosition(64,115,90,.6,0);
                 bucketElevator.servoDump();
-                drivetrain.gotoPosition(69.5,98,90,.6,0);
+                drivetrain.gotoPosition(64.5,98,90,.6,0);
                 sleep(2000);
         }
             //update dashboard and telemetry if used
